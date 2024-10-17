@@ -14,4 +14,8 @@ app.get("/car",async(req,resp)=>{
     resp.render("car",{data})
 })
 
-app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
+const port = process.env.PORT || 10000;  // Use the port from the environment
+
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});
