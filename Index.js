@@ -6,7 +6,14 @@ const app = express()
 const address = path.join(__dirname,"/public")
 app.set("view engine","ejs")
 app.use(express.static(address))
+const https = require('https');
 
+const options = {
+  hostname: 'example.com',
+  port: 10000,
+  method: 'GET',
+  secureProtocol: 'TLSv1_2_method'  // Use TLS 1.2
+};
 app.get("/car",async(req,resp)=>{
     const connection = await DB2();
     const coll = connection.collection("mahindra");
