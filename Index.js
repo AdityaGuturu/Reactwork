@@ -14,4 +14,4 @@ app.get("/car",async(req,resp)=>{
     resp.render("car",{data})
 })
 
-app.listen(10000)
+app.listen(0.0.0.0)
