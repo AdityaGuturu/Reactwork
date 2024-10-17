@@ -9,7 +9,6 @@ app.use(express.static(address))
 const https = require('https');
 
 https.get('https://your-service-url.com', { rejectUnauthorized: false }, (res) => {
-  // Handle response
 });
 
 app.get("/car",async(req,resp)=>{
