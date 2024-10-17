@@ -14,4 +14,4 @@ app.get("/car",async(req,resp)=>{
     resp.render("car",{data})
 })
 
-app.listen(0.0.0.0)
+app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
