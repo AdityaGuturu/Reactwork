@@ -8,12 +8,12 @@ app.set("view engine","ejs")
 app.use(express.static(address))
 const https = require('https');
 
-const options = {
-  hostname: 'example.com',
-  port: 10000,
-  method: 'GET',
-  secureProtocol: 'TLSv1_2_method'  // Use TLS 1.2
-};
+const https = require('https');
+
+https.get('https://your-service-url.com', { rejectUnauthorized: false }, (res) => {
+  console.log('No SSL verification in development mode');
+});
+
 app.get("/car",async(req,resp)=>{
     const connection = await DB2();
     const coll = connection.collection("mahindra");
