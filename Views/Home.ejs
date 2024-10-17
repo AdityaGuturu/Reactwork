@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/home.css">
+</head>
+<body>  
+  <%- include("common/nav") %>
+    <h1>I am using an EJS File</h1>
+    <h1>Food Items:</h1>
+<div style="display: block;">
+  <ol>
+    <% data.forEach((items)=>{ %>
+      <li style="font-family: cursive;"><%= items.food_name %></li>
+    <% }) %>
+  </ol>
+  
+    <% images.forEach((items)=>{ %>
+      <img src="<%= items.url %>" alt="" style="width: 200px;height: 200px;">
+    <% }) %>
+  
+    <ol class="example">
+      <% info.forEach((items)=>{ %>
+        <li style="font-family: cursive;" id="list">Name : <%= items.name %> Age :<%= items.Age %></li>
+      <% }) %>
+    </ol>
+    <img src="/images/static image 1.jfif" alt="">
+
+</div>
+</body>
+</html>
