@@ -40,4 +40,4 @@ app.get("/car",async(req,resp)=>{
     resp.render("car",{data})
 })
 
-app.listen(5000)
+app.listen(10000)
